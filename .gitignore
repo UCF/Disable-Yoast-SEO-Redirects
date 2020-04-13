@@ -1,0 +1,34 @@
+# osx noise
+.DS_Store
+profile
+
+# xcode noise
+build/*
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
+
+# svn & cvs
+.svn
+CVS
+=======
+*~
+._*
+.DS_Store
+Thumbs.db
+
+# npm, bower, and other dependencies
+node_modules
+bower_components
+src/components/*
+gulp-config.json
+typings
+.sass-cache/
+
+# debug files
+npm-debug.log

@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-transform-es2015-modules-strip": "^0.1.1",
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.6.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-eslint-if-fixed": "^1.0.0",
+    "gulp-include": "^2.4.1",
+    "gulp-readme-to-markdown": "^0.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "~4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "merge": "^1.2.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
