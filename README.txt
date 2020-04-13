@@ -12,7 +12,10 @@ Disables Yoast SEO Premium's redirection manager, including automatic redirectio
 
 == Description ==
 
-Disables Yoast SEO Premium's redirection manager, including automatic redirection generation and notifications.
+When activated, this plugin does the following:
+* Disables automatic generation of redirects when posts/terms are deleted, or when their slugs are modified.
+* Disables notifications from Yoast about redirects when posts/terms are deleted, or when their slugs are modified.
+* Removes the Redirects submenu page under "SEO" in the WordPress admin.
 
 
 == Documentation ==
