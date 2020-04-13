@@ -1,6 +1,6 @@
-# Contributing to {{My Project}}
+# Contributing to Disable Yoast SEO Redirects
 
-Thank you for your interest in contributing to this project!  If you are a developer for UCF and want to contribute to this plugin, we'd love to hear from you.
+Thank you for your interest in contributing to this project!
 
 This document outlines the best ways to submit new ideas or inform us of bugs.  Please take a moment to review these guidelines before submitting new issues or pull requests in order to make the contribution process easy and effective for everyone involved.
 
@@ -9,16 +9,15 @@ This document outlines the best ways to submit new ideas or inform us of bugs.  
 * [Bug reports](#bug-reports)
 * [Feature requests](#feature-requests)
 * [Pull requests](#pull-requests)
-* [Asking questions/getting help](#asking-questionsgetting-help)
 * [Code standards and style guides](#code-standards-and-style-guides)
 
 -----
 
 ## Using the issue tracker
 
-The [issue tracker](https://github.com/UCF/{{My-Project}}/issues) in Github is the preferred channel for [bug reports](#bug-reports), [feature requests](#feature-requests) and [submitting pull requests](#pull-requests).
+The [issue tracker](https://github.com/UCF/Disable-Yoast-SEO-Redirects/issues) in Github is the preferred channel for [bug reports](#bug-reports), [feature requests](#feature-requests) and [submitting pull requests](#pull-requests).
 
-Please do not use the issue tracker for personal support requests.  The [#help-plugins Teams channel](https://teams.microsoft.com/l/channel/19%3a5325780226474b76b53d50029eae9e22%40thread.skype/help-plugins?groupId=5e3e72e2-3599-47b3-bcfc-bb3d5b579f12&tenantId=bb932f15-ef38-42ba-91fc-f3c59d5dd1f1) is the best place to get help with your project.  See the section on [getting help](#asking-questionsgetting-help) for more information.
+Please do not use the issue tracker for personal support requests.  If you're a developer at UCF, the [#help-plugins Teams channel](https://teams.microsoft.com/l/channel/19%3a5325780226474b76b53d50029eae9e22%40thread.skype/help-plugins?groupId=5e3e72e2-3599-47b3-bcfc-bb3d5b579f12&tenantId=bb932f15-ef38-42ba-91fc-f3c59d5dd1f1) is the best place to get help with your project.
 
 
 ## Bug reports
@@ -30,10 +29,10 @@ Before you submit a new bug report, please follow these steps:
 
 1. **Use the GitHub issue search** &mdash; check if the issue has already been reported.  Feel free to comment in the existing issue if it is still open and you have new information to share.
 
-2. **Check if the issue has been fixed** &mdash; if you're not running the latest version of the plugin, please check your code against the repo's `master` branch first (`master` will always contain the latest, stable project code). If you are running the latest version, make sure the problem isn't already resolved in an upcoming [milestone](https://github.com/UCF/{{My-Project}}/milestones).
+2. **Check if the issue has been fixed** &mdash; if you're not running the latest version of the plugin, please check your code against the repo's `master` branch first (`master` will always contain the latest, stable project code). If you are running the latest version, make sure the problem isn't already resolved in an upcoming [milestone](https://github.com/UCF/Disable-Yoast-SEO-Redirects/milestones).
 
 ### Submit a bug report
-If you've followed the steps above and have a valid bug report to submit, you can submit it by [creating a new issue in Github](https://github.com/UCF/{{My-Project}}/issues/new?template=bug_report.md).
+If you've followed the steps above and have a valid bug report to submit, you can submit it by [creating a new issue in Github](https://github.com/UCF/Disable-Yoast-SEO-Redirects/issues/new?template=bug_report.md).
 
 Add a descriptive, understandable title and details about the bug in the description field, following the template provided. Please try to be as detailed as possible in your report. What steps will reproduce the issue? What browser(s) and OS experience the problem? Do other browsers show the bug differently? What would you expect to be the outcome? All of the information you provide will help us quickly evaluate and fix the issue.
 
@@ -42,16 +41,16 @@ If you have a live example of the bug available somewhere public, please include
 
 ## Feature requests
 
-We welcome new feature requests from developers across campus.  Before submitting a new request, think carefully about if the proposed feature aligns with the [goals of the project](https://github.com/UCF/{{My-Project}}/wiki/#project-goals) and with [UCF's brand](https://www.ucf.edu/brand/). We strongly encourage the discussion of new feature ideas in the [UCFTeam-CAMPUS-Wordpress Team](https://teams.microsoft.com/l/team/19%3acf4fa1fd7b1042949ecd1acf5413aa22%40thread.skype/conversations?groupId=5e3e72e2-3599-47b3-bcfc-bb3d5b579f12&tenantId=bb932f15-ef38-42ba-91fc-f3c59d5dd1f1).
+Before submitting a new feature request, please think carefully about if the proposed feature aligns with the [goals of the project](https://github.com/UCF/Disable-Yoast-SEO-Redirects/wiki/#about-this-project).
 
 Please provide as much detail and context as possible to justify the inclusion of your idea in the plugin. We reserve the right to deny feature requests when they don't align with the project's goals, or if said feature is already accomplishable with existing utilities/components.
 
-You can submit a new feature request by [creating a new issue in Github](https://github.com/UCF/{{My-Project}}/issues/new?template=feature_request.md) and filling out the provided template.
+You can submit a new feature request by [creating a new issue in Github](https://github.com/UCF/Disable-Yoast-SEO-Redirects/issues/new?template=feature_request.md) and filling out the provided template.
 
 
 ## Pull requests
 
-[**Please ask first**](#asking-questionsgetting-help) before embarking on any _significant_ pull request (e.g. implementing features, refactoring code); otherwise you risk spending a lot of time working on something that the plugin's maintainers might not want to merge into the project. Pull requests should be related to existing issues that have been acknowledged by UCF Web Communications.
+**Please ask first** before embarking on any _significant_ pull request (e.g. implementing features, refactoring code); otherwise you risk spending a lot of time working on something that the plugin's maintainers might not want to merge into the project. Pull requests should be related to existing issues that have been acknowledged by UCF Web Communications.
 
 All pull requests should remain focused in scope and avoid containing unrelated commits.
 
@@ -68,13 +67,13 @@ Adhering to the following process is the best way to submit a pull request:
 
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/{{My-Project}}.git
+   git clone https://github.com/<your-username>/Disable-Yoast-SEO-Redirects.git
 
    # Navigate to the newly cloned directory
-   cd {{My-Project}}
+   cd Disable-Yoast-SEO-Redirects
 
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/UCF/{{My-Project}}.git
+   git remote add upstream https://github.com/UCF/Disable-Yoast-SEO-Redirects.git
    ```
 
 3. If you cloned a while ago, get the latest changes from upstream:
@@ -96,7 +95,7 @@ Adhering to the following process is the best way to submit a pull request:
 
 5. Commit your changes in logical chunks. Please provide [helpful, readable commit messages](https://chris.beams.io/posts/git-commit/) (avoid nondescriptive messages such as "bugfix" or "minor change").
 
-    If you're making changes to scss or js files, make sure you're minifying **and committing** those minified file changes.  scss and js file processing should be performed using gulp commands provided in the repo (see [gulpfile.js](https://github.com/UCF/{{My-Project}}/blob/master/gulpfile.js))
+    If you're making changes to scss or js files, make sure you're minifying **and committing** those minified file changes.  scss and js file processing should be performed using gulp commands provided in the repo (see [gulpfile.js](https://github.com/UCF/Disable-Yoast-SEO-Redirects/blob/master/gulpfile.js))
 
     Additionally, make sure that any changes to the README are made in `README.txt`, NOT `README.md`.  The `README.md` file is generated automatically via the `gulp readme` task.  If you have any README updates to include with your changes, please make sure to run `gulp readme` so that both files get updated.
 
@@ -113,16 +112,6 @@ Adhering to the following process is the best way to submit a pull request:
    ```
 
 8. [Open a Pull Request](https://help.github.com/articles/about-pull-requests/) against the `rc-*` or `master` branch (whichever you initially branched off of.) Pull request titles and descriptions should be as descriptive and clear as possible.
-
------
-
-## Asking questions/getting help
-
-In general, we keep conversations about distributed UCF WordPress projects in the [UCFTeam-CAMPUS-Wordpress Team](https://teams.microsoft.com/l/team/19%3acf4fa1fd7b1042949ecd1acf5413aa22%40thread.skype/conversations?groupId=5e3e72e2-3599-47b3-bcfc-bb3d5b579f12&tenantId=bb932f15-ef38-42ba-91fc-f3c59d5dd1f1).  If you're not already a member of this Team, you'll be prompted to request access to join.
-
-Whenever you post a question in this Team, please include your **job title**, information about the **college or department** you work for, as well as the **site(s) you need help with** to help us help you more effectively.
-
-If you need help with using this theme on your site, please check out our [project documentation](https://github.com/UCF/{{My-Project}}/wiki) first.  If you can't find the answer to your question there, drop us a line in the [#help-plugins channel](https://teams.microsoft.com/l/channel/19%3a5325780226474b76b53d50029eae9e22%40thread.skype/help-plugins?groupId=5e3e72e2-3599-47b3-bcfc-bb3d5b579f12&tenantId=bb932f15-ef38-42ba-91fc-f3c59d5dd1f1).  You don't need to @mention anyone specific, but **please note that you're using the {{My Project}} when posting your question** and include a link to your site if it's relevant to your question.
 
 -----
 

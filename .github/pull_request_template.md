@@ -1,8 +1,8 @@
 <!---
-Thank you for contributing to {{My-Project}}.
+Thank you for contributing to Disable-Yoast-SEO-Redirects.
 
 Please make sure you've read our contributing guidelines:
-https://github.com/UCF/{{My-Project}}/blob/master/CONTRIBUTING.md
+https://github.com/UCF/Disable-Yoast-SEO-Redirects/blob/master/CONTRIBUTING.md
 
 Provide a general summary of your changes in the Title above and fill in the template below.
 -->

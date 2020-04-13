@@ -5,12 +5,12 @@ about: Create a report to help us improve
 ---
 
 <!--
-Thank you for reporting a possible bug in {{My-Project}}.
+Thank you for reporting a possible bug in Disable-Yoast-SEO-Redirects.
 
 Please provide a general summary of the issue in the Title above and fill in as much of the template below as you can.
 
 The version of WordPress can be found on the Admin Dashboard page in the bottom right-hand corner.
-The version of this plugin can be found by clicking "Plugins" in the Admin navigation and finding "{{My Project}}" in the list of plugins. The version number will be listed under the plugin description.
+The version of this plugin can be found by clicking "Plugins" in the Admin navigation and finding "Disable Yoast SEO Redirects" in the list of plugins. The version number will be listed under the plugin description.
 -->
 
 **Describe the bug**
