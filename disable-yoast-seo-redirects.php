@@ -10,74 +10,130 @@ GitHub Plugin URI: UCF/Disable-Yoast-SEO-Redirects
 
 namespace DisableYoastSEORedirects;
 
-
 if ( ! defined( 'WPINC' ) ) {
     die;
 }
 
 
 /**
- * Removes the Redirects subpage from the WordPress admin menu.
+ * Registers all actions/filters once plugins have loaded.
+ *
+ * @since 1.0.0
+ * @author Jo Dickson
+ */
+function init() {
+	if ( ! defined( 'WPSEO_VERSION' ) ) return;
+
+	remove_redirects_submenu_page();
+	disable_automatic_post_redirects();
+	disable_automatic_term_redirects();
+	disable_post_trash_notifications();
+	disable_term_delete_notifications();
+}
+
+add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );
+
+
+/**
+ * Callback that removes the Redirects subpage from the WordPress admin menu.
+ *
+ * @since 1.0.0
+ * @author Jo Dickson
+ */
+function remove_redirects_submenu_page_callback() {
+	remove_submenu_page( 'wpseo_dashboard', 'wpseo_redirects' );
+}
+
+
+/**
+ * Registers action that disables the Redirects subpage in the WordPress admin.
  *
  * @since 1.0.0
  * @author Jo Dickson
  */
 function remove_redirects_submenu_page() {
-	remove_submenu_page( 'wpseo_dashboard', 'wpseo_redirects' );
+	add_action( 'admin_menu', __NAMESPACE__ . '\remove_redirects_submenu_page_callback' );
 }
 
-add_action( 'admin_menu', __NAMESPACE__ . '\remove_redirects_submenu_page' );
+
+/**
+ * Disables automatic redirects for posts/pages.
+ *
+ * @since 1.0.0
+ * @author Jo Dickson
+ */
+function disable_automatic_post_redirects() {
+	if ( ! defined( 'WPSEO_VERSION' ) ) return;
+
+	if ( version_compare( WPSEO_VERSION, '12.9.0', '<' ) ) {
+		add_filter( 'wpseo_premium_post_redirect_slug_change', '__return_true' );
+	}
+	else {
+		add_filter( 'Yoast\WP\SEO\post_redirect_slug_change', '__return_true' );
+	}
+}
 
 
 /**
- * Yoast SEO Disable Automatic Redirects for
- * Posts And Pages
- * Credit: Yoast Development Team
- * Last Tested: May 09 2017 using Yoast SEO Premium 4.7.1 on WordPress 4.7.4
+ * Disables automatic redirects for terms.
+ *
+ * @since 1.0.0
+ * @author Jo Dickson
  */
-add_filter( 'wpseo_premium_post_redirect_slug_change', '__return_true' );
+function disable_automatic_term_redirects() {
+	if ( ! defined( 'WPSEO_VERSION' ) ) return;
+
+	if ( version_compare( WPSEO_VERSION, '12.9.0', '<' ) ) {
+		add_filter( 'wpseo_premium_term_redirect_slug_change', '__return_true' );
+	}
+	else {
+		add_filter( 'Yoast\WP\SEO\term_redirect_slug_change', '__return_true' );
+	}
+}
 
 
 /**
- * Yoast SEO Disable Automatic Redirects for
- * Taxonomies (Category, Tags, Etc)
- * Credit: Yoast Development Team
- * Last Tested: May 09 2017 using Yoast SEO Premium 4.7.1 on WordPress 4.7.4
+ * Disables redirect notifications for posts moved to Trash.
+ *
+ * @author Jo Dickson
+ * @since 1.0.0
  */
-add_filter( 'wpseo_premium_term_redirect_slug_change', '__return_true' );
+function disable_post_trash_notifications() {
+	if ( ! defined( 'WPSEO_VERSION' ) ) return;
+
+	// NOTE: until a bug in Yoast Premium <=13.4.1 with the
+	// `Yoast\WP\SEO\enable_notification_{$this->watch_type}_{$notification_type}`
+	// hook is fixed, we have to use deprecated filters:
+	add_filter( 'wpseo_enable_notification_post_trash', '__return_false' );
+
+	// if ( version_compare( WPSEO_VERSION, '12.9.0', '<' ) ) {
+	// 	add_filter( 'wpseo_enable_notification_post_trash', '__return_false' );
+	// }
+	// else {
+	// 	add_filter( 'Yoast\WP\SEO\enable_notification_post_trash', '__return_false' );
+	// }
+}
 
 
 /**
- * Yoast SEO Disable Redirect Notifications for
- * Posts or Pages: Moved to Trash
- * Credit: Yoast Development Team
- * Last Tested: May 09 2017 using Yoast SEO Premium 4.7.1 on WordPress 4.7.4
+ * Disables redirect notifications for deleted terms.
+ *
+ * @author Jo Dickson
+ * @since 1.0.0
  */
-add_filter( 'wpseo_enable_notification_post_trash', '__return_false' );
+function disable_term_delete_notifications() {
+	if ( ! defined( 'WPSEO_VERSION' ) ) return;
 
+	// NOTE: until a bug in Yoast Premium <=13.4.1 with the
+	// `Yoast\WP\SEO\enable_notification_{$this->watch_type}_{$notification_type}`
+	// hook is fixed, we have to use deprecated filters:
+	add_filter( 'wpseo_enable_notification_term_delete', '__return_false' );
 
-/**
- * Yoast SEO Disable Redirect Notifications for
- * Posts and Pages: Change URL
- * Credit: Yoast Development Team
- * Last Tested: May 09 2017 using Yoast SEO Premium 4.7.1 on WordPress 4.7.4
- */
-add_filter( 'wpseo_enable_notification_post_slug_change', '__return_false' );
+	// if ( version_compare( WPSEO_VERSION, '12.9.0', '<' ) ) {
+	// 	add_filter( 'wpseo_enable_notification_term_delete', '__return_false' );
+	// }
+	// else {
+	// 	add_filter( 'Yoast\WP\SEO\enable_notification_term_delete', '__return_false' );
+	// }
+}
 
-
-/**
- * Yoast SEO Disable Redirect Notifications for
- * Taxonomies: Moved to Trash
- * Credit: Yoast Development Team
- * Last Tested: May 09 2017 using Yoast SEO Premium 4.7.1 on WordPress 4.7.4
- */
-add_filter( 'wpseo_enable_notification_term_delete', '__return_false' );
-
-
-/**
- * Yoast SEO Disable Redirect Notifications for
- * Taxonomies: Change URL
- * Credit: Yoast Development Team
- * Last Tested: May 09 2017 using Yoast SEO Premium 4.7.1 on WordPress 4.7.4
- */
-add_filter( 'wpseo_enable_notification_term_slug_change', '__return_false' );
