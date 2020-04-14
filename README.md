@@ -1,16 +1,9 @@
-=== Disable Yoast SEO Redirects ===
-Contributors: ucfwebcom
-Requires at least: 5.3
-Tested up to: 5.3
-Stable tag: 0.0.0
-Requires PHP: 7.3
-License: GPLv3 or later
-License URI: http://www.gnu.org/copyleft/gpl-3.0.html
+# Disable Yoast SEO Redirects #
 
 Disables Yoast SEO Premium's redirection manager, including automatic redirection generation and notifications.
 
 
-== Description ==
+## Description ##
 
 When activated, this plugin does the following:
 * Disables automatic generation of redirects when posts/terms are deleted, or when their slugs are modified.
@@ -18,31 +11,31 @@ When activated, this plugin does the following:
 * Removes the Redirects submenu page under "SEO" in the WordPress admin.
 
 
-== Documentation ==
+## Documentation ##
 
 Head over to the [Disable Yoast SEO Redirects wiki](https://github.com/UCF/Disable-Yoast-SEO-Redirects/wiki) for detailed information about this plugin and installation instructions.
 
 
-== Changelog ==
+## Changelog ##
 
-= 1.0.0 =
+### 1.0.0 ###
 * Initial release
 
 
-== Upgrade Notice ==
+## Upgrade Notice ##
 
 n/a
 
 
-== Development ==
+## Development ##
 
 [Enabling debug mode](https://codex.wordpress.org/Debugging_in_WordPress) in your `wp-config.php` file is recommended during development to help catch warnings and bugs.
 
-= Requirements =
+### Requirements ###
 * node
 * gulp-cli
 
-= Instructions =
+### Instructions ###
 1. Clone the Disable-Yoast-SEO-Redirects repo into your local development environment, within your WordPress installation's `plugins/` directory: `git clone https://github.com/UCF/Disable-Yoast-SEO-Redirects.git`
 2. `cd` into the new Disable-Yoast-SEO-Redirects directory, and run `npm install` to install required packages for development into `node_modules/` within the repo
 3. Optional: If you'd like to enable [BrowserSync](https://browsersync.io) for local development, or make other changes to this project's default gulp configuration, copy `gulp-config.template.json`, make any desired changes, and save as `gulp-config.json`.
@@ -54,10 +47,10 @@ n/a
 5. Activate this plugin on your development WordPress site.
 6. If you enabled BrowserSync in `gulp-config.json`, you can run `gulp watch` to continuously watch changes to PHP files in this project and reload your browser when those files change.
 
-= Other Notes =
+### Other Notes ###
 * This plugin's README.md file is automatically generated. Please only make modifications to the README.txt file, and make sure the `gulp readme` command has been run before committing README changes.  See the [contributing guidelines](https://github.com/UCF/Disable-Yoast-SEO-Redirects/blob/master/CONTRIBUTING.md) for more information.
 
 
-== Contributing ==
+## Contributing ##
 
 Want to submit a bug report or feature request?  Check out our [contributing guidelines](https://github.com/UCF/Disable-Yoast-SEO-Redirects/blob/master/CONTRIBUTING.md) for more information.  We'd love to hear from you!
