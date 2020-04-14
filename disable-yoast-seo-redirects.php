@@ -105,13 +105,6 @@ function disable_post_trash_notifications() {
 	// `Yoast\WP\SEO\enable_notification_{$this->watch_type}_{$notification_type}`
 	// hook is fixed, we have to use deprecated filters:
 	add_filter( 'wpseo_enable_notification_post_trash', '__return_false' );
-
-	// if ( version_compare( WPSEO_VERSION, '12.9.0', '<' ) ) {
-	// 	add_filter( 'wpseo_enable_notification_post_trash', '__return_false' );
-	// }
-	// else {
-	// 	add_filter( 'Yoast\WP\SEO\enable_notification_post_trash', '__return_false' );
-	// }
 }
 
 
@@ -128,12 +121,5 @@ function disable_term_delete_notifications() {
 	// `Yoast\WP\SEO\enable_notification_{$this->watch_type}_{$notification_type}`
 	// hook is fixed, we have to use deprecated filters:
 	add_filter( 'wpseo_enable_notification_term_delete', '__return_false' );
-
-	// if ( version_compare( WPSEO_VERSION, '12.9.0', '<' ) ) {
-	// 	add_filter( 'wpseo_enable_notification_term_delete', '__return_false' );
-	// }
-	// else {
-	// 	add_filter( 'Yoast\WP\SEO\enable_notification_term_delete', '__return_false' );
-	// }
 }
 
