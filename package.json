@@ -4,7 +4,7 @@
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-readme-to-markdown": "^0.2.1",
-    "merge": "^1.2.1"
+    "merge": "^2.1.1"
   },
   "browserslist": [
     "last 2 versions"
